@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<!-- This is a form for user registration with added JavaScript validation -->
+<form onsubmit="return validateForm()">
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email"><br><br> <!-- Input field for email -->
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name"><br><br> <!-- Input field for name -->
+    <label for="birthdate">Birthdate:</label>
+    <input type="date" id="birthdate" name="birthdate"><br><br> <!-- Input field for birthdate -->
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender"> <!-- Dropdown menu for gender -->
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+        <option value="other">Other</option>
+    </select><br><br>
+    <input type="submit" value="Submit"> <!-- Submit button -->
+</form>
+
+<script>
+    function validateForm() {
+        // Get values from input fields
+        var email = document.forms[0].email.value;
+        var name = document.forms[0].name.value;
+        var birthdate = document.forms[0].birthdate.value;
+
+        // Check if required fields are empty
+        if (email == "" || name == "" || birthdate == "") {
+            alert("Please fill out all required fields.");
+            return false;
+        }
+
+        // Check if email is valid using regular expression
+        var emailPattern = /^\w+@[a-zA-Z_]+?\.[a-zA-Z]{2,3}$/;
+        if (!email.match(emailPattern)) {
+            alert("Please enter a valid email address.");
+            return false;
+        }
+
+        // Check if birthdate is in the past
+        var currentDate = new Date();
+        var inputDate = new Date(birthdate);
+        if (inputDate > currentDate) {
+            alert("Please enter a birthdate that is in the past.");
+            return false;
+        }
+
+        // Calculate age from birthdate
+        var birthYear = inputDate.getFullYear();
+        var birthMonth = inputDate.getMonth();
+        var birthDay = inputDate.getDate();
+        var age = currentDate.getFullYear() - birthYear;
+        if (currentDate.getMonth() < birthMonth || (currentDate.getMonth() == birthMonth && currentDate.getDate() < birthDay)) {
+            age--;
+        }
+
+        // Add 2 to age
+        age += 2;
+
+        // Display user information
+        alert("Email: " + email + "\nName: " + name + "\nBirthdate: " + birthdate + "\nGender: " + document.getElementById("gender").value);
+
+        return true;
+    }
+</script>
+</body>
+</html>
