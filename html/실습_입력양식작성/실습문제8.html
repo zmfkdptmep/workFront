@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>납품관리</title>
+    <style>
+        li{
+            line-height: 50px;
+            
+        }
+        .colorChange{
+            accent-color: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>납품관리</h1>
+    <form>
+        <fieldset>
+            <legend>납품자 정보</legend>
+            <ol>
+                <li>
+                    <label>납품자 명 : 
+                    <input type='text' name='name' id='name' placeholder='name' required></label>
+                </li>
+
+                <li>
+                    <label for='email'>email : </label> 
+                    <input type='email' name='email' id='email' placeholder='answs@naver.com'>
+                </li>
+                <li>
+                    <label for='homepage'>홈페이지 : </label> 
+                    <input type='url' name='homepage' id='homepage' value='https://'>
+                </li>
+            </ol>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>납품정보</legend>
+            <ul>
+                <li><label for='name'>상품명 : <input type='text' name='name' id='name'></label></li>
+                <li><label for='amount'>납품수량 : <input type='number' name='amount' id='amount' min='100' placeholder='최소 100'></label></li>
+                <li><label for='range'>납품등급 : <input class='colorChange' type='range' name='range' id='range' max='200' value='100'></label></li>
+                <li><label for='tarea'>기타사항 : <textarea name='tarea' id='tarea' cols='25' rows='3'></textarea></label></li>
+            </ul>
+        </fieldset>
+        <p><input type='submit' value='send message'></p>
+    </form>
+
+
+</body>
+</html>

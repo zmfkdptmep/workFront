@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>주문하기</title>
+    <style>
+		ul {
+			list-style:none;
+		}
+		li {
+			line-height:50px;
+		}
+    </style>
+</head>
+<body>
+    <h1>주문하기</h1>
+    <form>
+        <p><label> 고객명 : <input type='text' name='name' id='name' autofocus required></label></p>
+        <p><label> 연락처 : <input type='tel' name='phone' id='phone' required></label></p>
+        <p><label> E-mail : <input type='email' name='email' id='email' required></label></p>
+        <!-- required : null 방지-->
+    <fieldset>
+        <legend>피자 사이즈</legend>
+        <p><label><input type='radio' name='size' id ='size_s' value='s'>Small</label></p>
+
+        <p><input type='radio' name='size' id ='size_m' value='m'>
+            <label for='size_m'>Medium</label></p>
+
+        <p><input type='radio' name='size' id ='size_l' value='l'>
+            <label for='size_l'>Large</label></p>
+
+        <!-- name 값이 같은 경우 value로 구분하여 서버로 전송한다.(value가 전송됨) 
+            for를 사용해 id 값으로 이어주는 방법도 있다.(id=for 연습)
+            걍 앞뒤에 라벨 씌워도 노상관.(small 참고) -->
+    </fieldset>
+    <fieldset>
+        <legend>토핑 추가</legend>
+        <p><label><input type='checkbox' name='topping' id='bacon' value='bacon'> 베이컨 </label></p>
+        <p><label><input type='checkbox' name='topping'id='cheese' value='cheese'> 치즈 </label></p>
+        <p><label><input type='checkbox' name='topping' id='union' value='union'> 양파 </label></p>
+        <p><label><input type='checkbox' name='topping' id='mushroom' value='mushroom'> 버섯 </label></p>
+        
+        <!-- 마찬가지로 value 값이 전달된다. 같은 블록의 체크박스나 radio는 
+            같은 name으로 묶어주며, value값과 id 값으로 구분된다.
+            그리고 서버에는 topping=bacon 식으로 value 값으로 전달된다.-->
+
+    </fieldset>
+        <p><label>희망 배송 시간 : <input type='time' name='time'></label></p>
+        <p><label>배송 시 요청사항 : <textarea name='tarea' cols='21' rows='4'></textarea></label></p>
+        <p><label><input type='submit' value='주문하기'></label></p>
+    </form>
+    
+    
+</body>
+</html>

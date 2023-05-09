@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>회원가입</title>
+    <style>
+        
+        ul {
+			list-style:none;
+		}
+        li{
+            float: middle;
+        }
+        
+		
+    </style>
+</head>
+<body>
+    <h1>회원가입</h1>
+    <form>
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+            <table>
+                <tr>
+                    <th>ID</th>
+                    <td><input type='text' name='id' id='id' maxlength='10' size='35' placeholder='아이디 10글자 이내'></td>
+                    <td><input type='submit' value='중복확인'></td>
+                </tr>
+                <tr>
+                    <th>비밀번호</th>
+                    <td><input type='password' name='password' id='password' maxlength='8' size='35' placeholder='영문, 숫자, 특수문자 포함 8자 이상'></td>
+                </tr>
+                <tr>
+                    <th>비밀번호 확인</th>
+                    <td><input type='password' name='password' id='password' maxlength='8' size='35'></td>
+                </tr>
+                <tr>
+                    <th>Email</th>
+                    <td><input type='email' name='email' id='email' size='35'></td>
+                    <td><select>
+                        <option selected>
+                            직접입력
+                        </option>
+                        <option value='naver'>
+                            naver.com
+                        </option>
+                        <option value='google'>
+                            google.com
+                        </option>
+                    </select>
+                    </td>
+                </tr>
+            </table>
+
+
+               
+        </fieldset>
+
+        <fieldset>
+            <legend>추가 정보</legend>
+
+            <label for='photo'>
+                프로필 사진 : 
+            <input type='file' name='uploadFile' id='uploadFile'>
+            </label>
+
+            <br><br>
+
+            <label for='gender'>
+                성별 : 
+            <input type='radio' name='gender' id='gender_m' value='male'>남자
+            <input type='radio' name='gender' id='gender_f' value='female'>여자
+            </label>
+
+            <br><br>
+
+            <label for='birth'>
+                생년월일 : 
+            <input type='date' name='date' id='date'>
+            </label>
+
+            <br><br>
+
+            
+                취미 : <br>
+                <input type='checkbox' name='hobby' id='hobby_baseball' value='baseball'>야구
+                <input type='checkbox' name='hobby' id='hobby_basketball' value='basketball'>농구
+                <input type='checkbox' name='hobby' id='hobby_soccer' value='soccer'>축구<br>
+                <input type='checkbox' name='hobby' id='hobby_study' value='study'>공부
+                <input type='checkbox' name='hobby' id='hobby_music' value='music'>음악감상<br>
+                <input type='checkbox' name='hobby' id='hobby_etc' value='etc'>기타 :
+                <textarea name='tarea' id='tarea' rows='1'></textarea>
+            
+
+            <br><br>
+
+            <label for='tarea'>
+                자기소개<br>
+                <textarea name='tarea' id='tarea' cols='50' rows='7'></textarea>
+            </label>
+        </fieldset>
+        <br>
+        <input type='submit' value='회원가입'>
+        <input type='reset' value='다시입력'>
+        <input type='button' value='이전으로'>
+    </form>
+</body>
+</html>

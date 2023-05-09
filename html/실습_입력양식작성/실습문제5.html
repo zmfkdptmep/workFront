@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="ko">
+<head>
+	<meta charset="utf-8">
+	<title>예약 접수</title>
+	<style>
+		ul {
+			list-style:none;
+		}
+		li {
+			line-height:50px;
+		}
+		label {
+			width:60px;
+			float:left;
+		}
+	</style>
+</head>
+<body>
+	<h1>예약 정보</h1>
+	<!-- 
+			<form> = 사용자의 입력을 받기 위한 input을 담는 그릇
+				action = 이녀석을 기준으로 form 내부의 모든 태그와 함수가 작동한다.
+				method = 도메인 맨 뒤의 모든 input을 표시하는 기능을 끈다(post) or 켠다(get).
+			<form> = action에 정의된 페이지로 데이터를 전달, 다시 받기 위해(화면에 띄우기 위해) 요청한다. -->
+	
+	<form action='실습문제6.html' method='get'>
+		<ul>
+		<li>아이디 : <input type='text' name='id' size='25'></li>
+		<li>휴대폰 : <input type='phone' name='phone' size='25'></li>
+		<li>이메일 : <input type='email' name='email' size='25'></li>
+		<li><input type='submit' value='예약하기'></li>
+		</ul>
+		<!-- form 안에 ul ol 쓸 수 있다.
+		 	그럼 자동으로 들여쓰기 되어서 깔끔띠-->
+	</form>
+	<hr>
+
+
+
+	</form>
+</body>
+</html>
