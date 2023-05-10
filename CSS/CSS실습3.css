@@ -1,0 +1,18 @@
+ul{
+    list-style: none;
+    line-height: 2;
+}
+#red{
+    color: rgb(182, 9, 9);
+    font-size: 1.5em;
+    font-weight: 900;
+}
+div{
+    border: 1px solid rgba(0, 0, 0, 0.192);
+    
+    width: 510px;
+    padding: 10px;
+
+
+    
+}

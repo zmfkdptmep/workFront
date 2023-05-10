@@ -1,0 +1,15 @@
+div{
+    width: 510px;
+    margin: 0px auto; /* 가운데 정렬 */
+}
+#blue{
+    color: white;
+    background-color: rgb(9, 9, 148);
+}
+#red{
+    color: red;
+    font-weight: 900;
+}
+#i{
+    vertical-align: super;
+}

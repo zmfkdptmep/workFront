@@ -1,0 +1,15 @@
+border의 바깥 여백 \ margin
+
+border의 안쪽 여백 \ padding
+
+
+border = 테두리
+
+
+
+
+
+------ 선택자 우선순위 -------
+
+<태그> -> .class -> #id -> inline (style) ->!important
+

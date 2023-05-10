@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>회원가입</h1>
+
+    <form>
+        <fieldset>
+            <legend>필수 입력 사항</legend>
+                <table>
+                    <tr>
+                        <th>
+                            <label for='id'>아이디</label>
+                        </th>
+                        <td><input type='text' name='id' id='id' placeholder='아이디 10글자 이내' size='35'></td>
+                        <td><input type='submit' value='중복확인'></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for='password'>비밀번호</label>
+                        </th>
+                        <td><input type='password' name='password' id='password' placeholder='영문, 숫자, 특수문자 포함 8글자 이내' size='35'></td>
+                    </tr>
+                    <tr>
+                        <th>
+                            <label for='passwordcheck'>비밀번호 확인</label>
+                        </th>
+                        <td><input type='password' name='password' id='passwordcheck' size='35'></td>
+                    </tr>
+                    <tr>
+                        <th>이메일</th>
+                        <td><input type='email' name='email' id='email' size='35'></td>
+                        <td><select>
+                            <option selected>
+                                직접입력
+                            </option>
+                            <option value='naver'>
+                                naver.com
+                            </option>
+                            <option value='daum'>
+                                daum.net
+                            </option>
+                            <option value='google'>
+                                google.com
+                            </option>
+                        </select></td>
+                    </tr>
+
+                </table>
+
+
+        </fieldset>
+        <fieldset>
+            <legend>추가 정보</legend>
+                <label for='uploadFile'>프로필 사진 : </label>
+                <input type='file' name='uploadFile' id='uploadFile'>
+
+                <p>
+                <label for='gender'>성별 : </label>
+                <input type='radio' name='gender' id='gender_m'>남자
+                <input type='radio' name='gender' id='gender_f'>여자
+                </p>
+
+                <p>
+                <label for='birth'>생년월일 : </label>
+                <input type='date' name='birth' id='birth'>
+                </p>
+                
+                <p>
+                취미 : 
+                <br>
+                <input type='checkbox' name='hobby' id='baseball' value='baseball'>야구
+                <input type='checkbox' name='hobby' id='soccer' value='soccer'>축구
+                <input type='checkbox' name='hobby' id='basketball' value='basketball'>농구<br>
+                <input type='checkbox' name='hobby' id='study' value='study'>공부
+                <input type='checkbox' name='hobby' id='farming' value='farming'>밭갈기
+                <input type='checkbox' name='hobby' id='lol' value='lol'>롤<br>
+                기타 : <textarea name='hobby' id='k' rows='1'></textarea>
+                </p>
+                <p>
+                자기소개<br>
+                <textarea name='tarea' id='tarea' cols='50' rows='10'></textarea>
+                </p>
+        </fieldset>
+        
+        <p>
+        <input type='submit' value='회원가입'>
+        <input type='reset' value='다시입력'>
+        <input type='button' value='이전으로'>
+        </p>
+
+    </form>
+</body>
+</html>
